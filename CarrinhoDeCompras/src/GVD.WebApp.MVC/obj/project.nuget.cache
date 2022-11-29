@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "phl4pluLxQ5i1d0oyzPHQDsx46dJQrgUT9jHeE4LcL/a6hjBY4kpcB4MoY0zHH734ZCPsJQLIR8PD8sCWhjXhA==",
+  "dgSpecHash": "nTWxNb27hMUM1LsjoOtFp17ppVXCXcD8Un1EtCCkGal1fCBAUzJnEZIAQul+mtZ6wqlw7gme2ANwZEVQn2y5bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Guilherme\\source\\repos\\CarrinhoDeCompras\\src\\GVD.WebApp.MVC\\GVD.WebApp.MVC.csproj",
+  "projectFilePath": "E:\\Guilherme\\Documents\\GitHub\\dev\\CarrinhoDeCompras\\src\\GVD.WebApp.MVC\\GVD.WebApp.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Guilherme\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Guilherme\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
