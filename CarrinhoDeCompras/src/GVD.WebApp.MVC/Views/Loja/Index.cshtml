@@ -1,0 +1,29 @@
+﻿@using GVD.WebApp.MVC.Data;
+@{
+    ViewData["Title"] = "Vitrine";
+}
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo</h1>
+    <p>Esta é uma aplicação com produtos mockados para teste da API Rest Carrinho de Compras.</p>
+</div>
+
+<div class="container gradeItens mt-3">
+    <div class="row text-center margin-auto">
+
+        @foreach (var item in Itens.tabelaItens)
+        {
+
+        <div class="offset-0 col-12 offset-lg-1 col-lg-3 mb-5 mt-3 border p-3">
+            <img src="~/images/@item.imagem" width="164" height="270" />
+
+            <h5>@item.nome</h5>
+            <p>@item.valor.ToString("C")</p>
+                <form asp-action="AdicionarItem">
+                    <input type="hidden" name="itemId" value="@item.id">
+                    <input type="submit" class="btn btn-warning" value="Adicionar ao carrinho">
+                </form>
+        </div>
+
+        }
+    </div>
+</div>

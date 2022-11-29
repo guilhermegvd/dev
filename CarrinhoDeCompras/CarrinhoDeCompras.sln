@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GVD.WebApp.MVC", "src\GVD.WebApp.MVC\GVD.WebApp.MVC.csproj", "{69BEABAA-1ED2-42F9-B4E5-70165306895C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{686D659A-21C5-43DA-981F-867DA9499F72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2D564341-4246-4703-B797-B6BF8FDDB983}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShoppingCart", "ShoppingCart", "{25D17277-226D-44F4-845B-5D040B1FAA73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GVD.ShoppingCart.API", "src\GVD.ShoppingCart.API\GVD.ShoppingCart.API.csproj", "{60703F27-C62C-4183-9D20-3D8EB7F71D8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69BEABAA-1ED2-42F9-B4E5-70165306895C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BEABAA-1ED2-42F9-B4E5-70165306895C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BEABAA-1ED2-42F9-B4E5-70165306895C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BEABAA-1ED2-42F9-B4E5-70165306895C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60703F27-C62C-4183-9D20-3D8EB7F71D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60703F27-C62C-4183-9D20-3D8EB7F71D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60703F27-C62C-4183-9D20-3D8EB7F71D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60703F27-C62C-4183-9D20-3D8EB7F71D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{69BEABAA-1ED2-42F9-B4E5-70165306895C} = {686D659A-21C5-43DA-981F-867DA9499F72}
+		{25D17277-226D-44F4-845B-5D040B1FAA73} = {2D564341-4246-4703-B797-B6BF8FDDB983}
+		{60703F27-C62C-4183-9D20-3D8EB7F71D8B} = {25D17277-226D-44F4-845B-5D040B1FAA73}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C534C17-1323-49AA-957C-1D2330D80FC2}
+	EndGlobalSection
+EndGlobal

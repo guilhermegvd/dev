@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GVD.WebApp.MVC.props" />
+</Project>

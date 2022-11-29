@@ -1,0 +1,43 @@
+﻿@model GVD.WebApp.MVC.Models.CarrinhoViewModel
+
+<div class="card">
+    <div class="card-header">
+        <span class="fa fa-dollar-sign"></span> Total
+    </div>
+    <div class="card-body">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Voucher)
+            </dt>
+            <dd>
+                <div class="row">
+                    <div class="col-9">
+                        <form asp-action="AplicarVoucher">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="voucher" id="voucher" value="@Model.Voucher" placeholder="Voucher Desconto">
+                                <span asp-validation-for="@Model.Voucher" class="text-danger"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form asp-action="RetirarVoucher">
+                            <button type="submit" value="" class="btn btn-danger"><i class="fas fa-xmark"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ValorDesconto)
+            </dt>
+            <dd>
+                @Model.ValorDesconto.ToString("C")
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ValorTotal)
+            </dt>
+            <dd>
+                @Model.ValorTotal.ToString("C")
+            </dd>
+        </dl>
+    </div>
+</div>

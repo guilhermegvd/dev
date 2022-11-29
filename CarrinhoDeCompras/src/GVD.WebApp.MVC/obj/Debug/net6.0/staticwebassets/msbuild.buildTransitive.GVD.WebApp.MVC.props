@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\GVD.WebApp.MVC.props" />
+</Project>

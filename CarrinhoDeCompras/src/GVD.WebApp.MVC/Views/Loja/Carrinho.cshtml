@@ -1,0 +1,85 @@
+﻿@model GVD.WebApp.MVC.Models.CarrinhoViewModel
+
+@{
+    ViewData["Title"] = "Carrinho";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Carrinho</h1>
+
+<div class="row">
+    <hr />    
+    <div class="col mb-4 order-xl-1 mb-xl-0">
+        <partial name="_TotalCarrinho" />
+    </div>
+
+    <div class="col-12 col-xl-8 order-xl-0">
+        <table class="table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Itens[0].Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Itens[0].ValorUnitario)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Itens[0].Quantidade)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Itens)
+                {
+                    <tr class="align-middle px-3">
+                        <td>
+                            <img src="~/images/@Html.DisplayFor(modelItem => item.Imagem)" width="50" height="83" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @item.ValorUnitario.ToString("C")
+                        </td>
+                        <td>
+                            <form asp-action="AtualizarQuantidade" method="post">
+                                <div class="form-group">
+                                    <input type="hidden" id="idItem" name="idItem" value="@item.IdItem" />
+                                    <input type="hidden" id="Nome" name="Nome" value="@item.Nome" />
+                                    <input type="hidden" id="Imagem" name="Imagem" value="@item.Imagem" />
+                                    <input type="hidden" id="ValorUnitario" name="ValorUnitario" value="@item.ValorUnitario" />
+                                    <input asp-for="@item.Quantidade" class="form-control" name="Quantidade" />
+                                    <span asp-validation-for="@item.Quantidade" class="text-danger"></span>
+                                </div>
+                            </form>
+                        </td>
+                        <td class="mr-0 text-right">
+                            <form asp-action="RemoverItem" method="post">
+                                <input type="hidden" name="idItem" value="@item.IdItem" />
+                                <button type="submit" value="Excluir" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @if (Model.Itens.Count() == 0)
+        {
+            <p class="text-center mt-5">Não há nada por aqui. <a asp-action="Index">Volte para a seleção de produtos</a> e veja se algo te interessa.</p>
+        }
+    </div>
+</div>
+
+@section Scripts {    
+    <script>
+        $(document).ready(function(){
+            $(":input").focusin();
+            $(":input").change(function() {
+                $(this).closest("form").submit();
+            });
+        });
+    </script>
+}                       
